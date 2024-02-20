@@ -1,0 +1,18 @@
+[
+{
+    "firstName":"jena",
+    "lastName":"atom",
+    "email":"jenifeato@gmail.com",
+    "phone":"4556677889",
+    "gender":"feMale",
+    "status":"active"
+  },
+  {
+    "firstName": "Eminem4",
+    "lastName": "kop",
+    "email": emilyjhkop@gmail.com",
+    "phone": "1122334455",
+    "gender": "Female",
+    "status": "active"
+  }
+]
