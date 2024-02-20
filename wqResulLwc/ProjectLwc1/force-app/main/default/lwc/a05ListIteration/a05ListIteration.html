@@ -1,0 +1,46 @@
+<template>
+  <lightning-card title="List Iteration(FOR EACH)">
+     <p>SEHIRLER --> {sehirListesi}</p>    
+
+  <br>
+        <template for:each={sehirListesi} for:item="sepet">
+          <p key={sepet}> Nasilsin? </p>
+          <p  key={sepet}> SEHIR -->{sepet} </p>
+        </template>
+   </lightning-card>
+
+  <br>
+
+<lightning-card title="List Iteration(Iteration)">
+
+     <template iterator:it ={sehirListesi}>
+           <p  key={it.value}> SEHIR -->{it.value} </p>
+        </template>     
+  <br>
+     <template iterator:it ={sehirListesi}>
+           <h1 key={it.value} if:true={it.first}  > TURKIYENIN SEHIRLERI</h1> 
+           <p  key={it.value}> SEHIR -->{it.value} </p>
+           <h1 key={it.value} if:true={it.last}> TESEKKUR EDERIM</h1> 
+        </template>
+
+ </lightning-card>
+
+<br><br>
+ 
+
+
+
+<lightning-card title="OBJECT iteration">
+    <p>  CICEK LISTESI--> {cicekListesi} </p>
+
+   <template for:each={cicekListesi} for:item="cicek">    
+   <ol key={cicek.id}>
+    
+      <li>  <img src={cicek.imgUrl} alt={cicek.name} width="200" height="250"></li>
+      <li> CICEK ADI -->{cicek.name}</li>
+      <li> CICEK Familya-->{cicek.familya}</li>
+      <br>
+  </ol> 
+  </template>
+</lightning-card>
+</template>

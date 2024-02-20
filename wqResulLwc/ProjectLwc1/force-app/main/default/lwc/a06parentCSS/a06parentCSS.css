@@ -1,0 +1,12 @@
+h1{
+ color:blue;
+}
+
+/*c-a06child-comp{
+    color:red;
+}*/
+
+c-a06child-comp{
+    --guzel :red;
+}
+

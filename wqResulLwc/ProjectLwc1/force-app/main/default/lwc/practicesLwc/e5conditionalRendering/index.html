@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Conditional Rendering PAROLA ornegi">
+        <lightning-input
+        type="Text" 
+        label="Parola Giriniz"
+        name="input1"
+        onchange={handleInput}
+       ></lightning-input>
+       <template if:true = {bayrak}>
+         <p> bayrak ----->> PAROLAYI BULDUN!! </p>
+       </template>
+       <template if:false = {bayrak}>
+         <p> bayrak --->> false </p>
+       </template>
+    </lightning-card>
+         </template>
+    

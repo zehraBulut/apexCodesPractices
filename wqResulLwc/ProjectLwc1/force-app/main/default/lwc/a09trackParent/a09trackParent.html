@@ -1,0 +1,31 @@
+
+    <template>
+
+        <lightning-card  title="Track Decorator ">
+            <lightning-input
+                 type="text" 
+                 label="Isminizi Giriniz" 
+                 onchange={handleIsim}   
+            ></lightning-input>
+    
+    
+         <lightning-input
+                 type="text" 
+                 label="Soy Isminizi Giriniz" 
+                 onchange={handleSoyIsim}   
+            ></lightning-input>  
+        
+    
+    
+        <c-a09track-decorator-object 
+    
+    ad= {isim}
+    soyad= {soyIsim}
+    
+    
+    > </c-a09track-decorator-object>
+    
+    </lightning-card>
+    
+    </template>
+

@@ -1,0 +1,54 @@
+<template>
+<lightning-card title="Conditional Rendering" >
+    <lightning-input
+        type="checkbox" 
+        label="Fag degistir"
+        name="input1"
+        checked={flag}
+        onchange={handleCheckbox}
+    > </lightning-input> 
+
+  
+   <template if:true={flag}>
+       <p> FLAG ----->> TRUE </p>
+   </template>
+
+   <template if:false={flag}>
+       <p> FLAG --->> FALSE </p>
+   </template>
+</lightning-card>
+    
+<br>
+
+<lightning-card title="Conditional Rendering PAROLA ornegi">
+
+    <lightning-input
+    type="Text" 
+    label="Parola Giriniz"
+    name="input1"
+    onchange={handleInput}
+   ></lightning-input>
+
+
+   <template if:true = {bayrak}>   
+     <p>password ---> <b style="color: rgb(11, 138, 11);">PAROLAYI BULDUN!!!</b></p>
+   </template>
+
+ 
+   <template if:false = {bayrak}>   
+     <p>password ---> <b style="color:fuchsia;">sory!!!</b></p>
+   </template>
+   
+
+
+
+
+
+</lightning-card>
+     
+
+  
+
+
+
+</template>

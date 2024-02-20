@@ -1,0 +1,79 @@
+<template>
+   
+
+<lightning-card  title="DATA BİNDİNG (one direction)">
+       <h1>my  name  is  {name}</h1>
+</lightning-card>
+
+
+
+<lightning-card  title="DATA BİNDİNG (double direction)">
+    <lightning-input
+         type="text" 
+         label="Isminizi Giriniz" 
+         onchange={handleIsim}   
+    ></lightning-input>
+
+    <h1>my name {ad}</h1>
+
+</lightning-card>
+
+ <br>
+ //*************************************************************
+
+
+<lightning-card  title="Full isim olusturma">
+    <lightning-input
+     type="text" 
+     label="Isminizi Giriniz" 
+     onchange={handleFirstName}
+    ></lightning-input>
+
+<br>
+
+    <lightning-input
+    type="text" 
+    label="soyisminizi Giriniz" 
+    onchange={handleLastName}
+   ></lightning-input>
+
+<br>
+
+<p>benim full adim  {tumIsim}</p>
+
+</lightning-card>
+
+<br>
+
+//******************************************
+
+
+<lightning-card  title="TOPLAMA">
+    <lightning-input
+         type="number"  
+         name="input1" 
+         label="SAYI 1"
+         value="0"
+         onblur={handleNum1}
+    ></lightning-input>
+
+ <br>
+
+ <lightning-input
+       type="number"
+       name="input2" 
+       label="SAYI 2"
+       value="0"
+       onblur={handleNum2}
+ ></lightning-input>
+
+
+<p> sayi 1= {sayi1} ile  sayi 2 = {sayi2} toplami === {toplam} </p>
+
+<br>
+
+
+</lightning-card>
+
+</template>
+

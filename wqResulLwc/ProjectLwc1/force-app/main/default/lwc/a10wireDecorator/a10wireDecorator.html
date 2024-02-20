@@ -1,0 +1,88 @@
+<template>
+    
+<lightning-card title="@wire decorator">
+<!--listeyi ekranda gormek ıcın foreach kulan,armuttakı datadan gelcek-->
+   <!--   acc = objenctın tamanmını ıfade edyr-->
+   <!--basit lıste getir-->
+   <template for:each={armut.data} for:item="acc">
+   <p key={acc.Id} > ID -->  {acc.Id}   NAME --> {acc.Name} </p>
+   </template>
+</lightning-card>
+
+<br><p>---------------------------</p>
+
+
+
+<lightning-card title="wire ile filtre">
+    <!--filtre ile LİSTE getirmek(input kulanarak)  1.yontem-->
+
+<lightning-input 
+type="text"
+label="Account Getir"
+onchange={handleAccount}>
+</lightning-input>
+
+
+<template for:each={filtreIleAccountListesi.data} for:item="acc">
+<p key={acc.Id} > ID -->  {acc.Id}   NAME --> {acc.Name} </p>
+ </template>
+
+
+</lightning-card>
+
+<br><p>---------------------------</p>
+
+
+<lightning-card title="wire ile filtre 2.YONTEM">
+    <!--filtre ile LİSTE getirm(input kulanarak)  2.yontem-->
+
+<lightning-input 
+type="text"
+label="Account Getir"
+onchange={handleAccountIki}>
+</lightning-input>
+
+
+<template for:each={dataListesi} for:item="acc">
+<p key={acc.Id} > ID -->  {acc.Id}   NAME --> {acc.Name} </p>
+ </template>
+
+</lightning-card>
+
+<br><p>-----------------------------</p>
+
+
+<lightning-card title="Imperative yontem">
+<!--Imperative yontem ile liste getirme-->
+
+<lightning-input 
+type="text"
+label="Account Getir"
+onchange={handleAccountImperative}>
+</lightning-input>
+
+
+
+<lightning-button
+variant="success" 
+label="Account Getir" 
+title="Successful action" 
+onclick={handleAccountGetir} 
+class="slds-m-left_x-small"
+></lightning-button>
+
+
+
+
+<template for:each={imperativeListe}
+ for:item="acc">
+<p key={acc.Id} > 
+    ID -->  {acc.Id}  
+    NAME --> {acc.Name} </p>
+</template>
+
+
+
+</lightning-card>
+
+</template>
